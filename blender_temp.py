@@ -28,9 +28,9 @@ def create_and_save_examples(N=1):
     cam = bpy.context.scene.camera
     csv_text = ''
     bpy.context.scene.render.image_settings.file_format = 'PNG'
-    bpy.context.scene.render.image_settings.resolution_x = RES_X
-    bpy.context.scene.render.image_settings.resolution_y = RES_Y
-    dirpath = f'{os.path.dirname(bpy.data.filepath)}/{name}_{RES_X}x{RES_Y}'
+    bpy.context.scene.render.resolution_x = RES_X
+    bpy.context.scene.render.resolution_y = RES_Y
+    dirpath = f'{os.path.dirname(bpy.data.filepath)}/{NAME}_{RES_X}x{RES_Y}'
 
     for i in range(N):
         v = noise.random_unit_vector()
